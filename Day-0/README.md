@@ -21,3 +21,13 @@ example
 
  second way is much readable and easy to write which are called lterals
  and more over if the functions are created using new (constructor form) it is harder to test as debugger cannot recognize these type of functions therefore it will act as the black box in the application
+
+
+other than functon type of the object will return object so it is better to use instanceof  to check correctly
+example
+var a=[]
+typeof a//returns object
+//else we can write
+console.log(a instanceof Array )// this will return true     this also get tricky because every thing is eventually points to Object so it will return true even for
+
+console.log(a instanceof Object  )// returns true
