@@ -28,6 +28,27 @@ example
 var a=[]
 typeof a//returns object
 //else we can write
-console.log(a instanceof Array )// this will return true     this also get tricky because every thing is eventually points to Object so it will return true even for
-
+console.log(a instanceof Array )// this will return true this also get tricky because every thing is eventually points to Object so it will return true
 console.log(a instanceof Object  )// returns true
+
+so what is the best way to find?
+Array.isArray(a)//hey this will return true finally we got some solution but this is not supported in Ie 8 (who cares about ie 8 :joy: )
+
+primitive wrapper types
+The things(references ) that are created by default
+example
+var a="some Text"
+var char=a.charAt(0)//first line we set it as primitive and in second line it is behaving like an object with references like charAt() etc
+
+so how does it works ?
+
+var a="some Text"//when we set the value the followings thigs are done by browser
+
+var temp=new String(a)
+var char=temp.charAt(0); //this process is known as auto boxing
+temp=null //garbage collection
+
+so it is behaving like an object so can i set values :confused: ?
+
+as we can see in above example the temp is set to null as soon as we use carAt() so even if we set the value the value will be null :joy:
+
