@@ -54,3 +54,38 @@ as we can see in above example the temp is set to null as soon as we use carAt()
 
 
 ## Day 1 of Javascript
+
+### Functions
+
+ways to declare functions are
+
+//first way
+
+
+var result  = add(5,5);
+
+function add(num1,num2){
+    return num1+num2;
+}
+
+//second way
+
+var result =add(5,5)
+
+var add=function(num1,num2){
+        return num1+num2;
+}
+
+what do u think output will be ?
+
+first way works fine because ,fucnction hosting will only happens to function which value is known ahead of time
+like in first way we use function syntax to create function which makes compiler to understand that that is a function and it will add(hoist) these functions  to the top .
+
+and in the second way it throws error saying that add is not a function
+
+
+
+
+
+
+
