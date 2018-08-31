@@ -57,6 +57,10 @@ as we can see in above example the temp is set to null as soon as we use carAt()
 
 ### Functions
 
+u know how javascript know if it is function or not?
+function is also a object which has some special propery called [[Call]] by which cannot be accesed programmatically
+
+
 ways to declare functions are
 
 //first way
@@ -83,7 +87,28 @@ like in first way we use function syntax to create function which makes compiler
 
 and in the second way it throws error saying that add is not a function
 
+as functions can be assigned to variables which makes javascript more powerfull language
 
+consider example with sort()
+sort accepts  an optional  function which can be used as comparison operator
+since sort method converts every item in the array to string and then compares we can pass a function which will compare two numbers and can be used to sort numbers
+
+var num=[9,8,5,2,10];
+num.sort((a,b)=>a-b) //returns [2,4,8,9,10] in sorted order    a and b first and second numbers
+// note here (a,b)=>a-b is short syntax for function(a,b){return a-b;} and this function is anonynous function
+
+another unique aspect of js is that u can pass any number of arguments to the function and values can be accesed by using array-like structure called arguments
+
+
+example
+
+function a(){
+    return arguments[0];
+}
+
+a("hi")// returns "hi"
+
+and length of function a will be zero
 
 
 
