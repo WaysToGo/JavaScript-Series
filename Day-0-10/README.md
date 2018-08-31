@@ -52,3 +52,5 @@ so it is behaving like an object so can i set values :confused: ?
 
 as we can see in above example the temp is set to null as soon as we use carAt() so even if we set the value the value will be null :joy:
 
+
+## Day 1 of Javascript
