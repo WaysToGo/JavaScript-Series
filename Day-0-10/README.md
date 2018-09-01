@@ -99,6 +99,7 @@ num.sort((a,b)=>a-b) //returns [2,4,8,9,10] in sorted order    a and b first and
 
 another unique aspect of js is that u can pass any number of arguments to the function and values can be accesed by using array-like structure called arguments
 
+note : Array.isArray(arguments) always returns false.
 
 example
 
@@ -107,10 +108,118 @@ function a(){
 }
 
 a("hi")// returns "hi"
-
-and length of function a will be zero
-
+a.length// returns 0
 
 
+## Day 2 of JavaScript
+
+### Objects
+
+
+As we know that we can add and remove values in object any time .Here i am going to explain how it works internally
+
+consider a person Object which has a name and sayName function
+
+var person={
+    name:"Reddy",
+    sayName:function(){
+        console.log(person.name);
+    }
+}
+
+as u can see if u want to change the name of variable person Then  u need to change the value in sayName function this will become hard to maintain if we are writing a very  long objects
+
+so what would be the solution for this ?
+
+"this" is the solution  ,every object in Javascript has the this context
+
+same person can be re written as
+
+var person={
+    name:"Reddy",
+    sayName:function(){
+        console.log(this.name);
+    }
+}// here  i am not  using arrow function since arrow function will take the scope of parent
+
+if we can do this then we can try something else example
+
+function sayNameForAll(){
+    console.log(this.name)
+}
+
+
+var person1={
+    name:"reddy",
+    sayName=sayNameForAll
+}
+
+person1.sayName()// logs reddy
+
+ the ability to change the value of this of functions  is the key for good object oriented programming
+
+ so how can we change the this  value in functions?
+
+ this can be done in three different ways they are call   apply and bind
+
+ example for call
+
+function sayNameForAll(value){
+    console.log(value +"::"+ this.name)
+}
+
+
+var person1={
+    name:"reddy", //because of call() method we dont need to add sayNameForAll to each object
+    }
+
+sayNameForAll.call(person1,"Hey my name is ")// Hey my name is reddy
+
+so what does call do?
+call will set the value of this explicitly instad of letting Javascript engine  do it automatically
+
+example for apply
+
+apply is similar to call the only difference is that it takes the iist of arguments
+
+
+function sayNameForAll(value){
+    console.log(value +"::"+ this.name)
+}
+
+
+var person1={
+    name:"reddy",
+    }
+
+sayNameForAll.apply(person1,["Hey my name is "])// output Hey my name is ::reddy
+
+
+bind this will behave diffently than other two(call,apply)
+
+function sayNameForAll(value){
+    console.log(value +"::"+ this.name)
+}
+
+
+var person1={
+    name:"reddy",
+    }
+
+var sayNameforPerson1=sayNameForAll.bind(person1);
+
+sayNameforPerson1("Hey my name is ")//output Hey my name is ::reddy
+
+var sayNameforPerson1WithArgument=sayNameForAll.bind(person1,["Hey my name is "])// this will also bind the value of first argument
+
+sayNameforPerson1WithArgument()//output Hey my name is ::reddy
+// even if we call sayNameforPerson1WithArgument with argument the out put will not change
+
+once bind is done  this  value wont change
+
+
+There is a difference between the enumerable properties returned in a for-in loop
+and the ones returned by Object.keys(). The for-in loop also enumerates prototype
+properties, while Object.keys() returns only own (instance) properties.
 
 
