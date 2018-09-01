@@ -244,7 +244,40 @@ console.log(person.name)//Output:undefined
 
 [[Set]] Set is called if that propery already exists and it will update the value of name from "reddy" to "other"
 
-[[Delete]]
+[[Delete]] delete will delete property in the object as u can see in the above example after delete the value is undefinded
+
+
+Enurable
+
+By default all the property in object are enumerable which means [[Enumerable]] value is set to true
+
+ways to iterate are
+
+for...in //use key value pair to oterate
+Object.keys() //will return the array of keys which can be used to iterate
+
+
+is there any difference between these two ways?
+
+yes,for...in will also iterate the prototype properties also
+while Object.keys()  will only the list of keys which are own properties of object
+
+not all properties are enumerable,most of native methods are not enumerable
+
+Then how to test if they are enumerable?
+
+var person1 = {
+ name: "Reddy"
+};
+
+console.log(person1.propertyIsEnumerable("name"));// Output true
+
+
+
+
+
+
+
 
 
 
