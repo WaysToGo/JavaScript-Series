@@ -116,8 +116,6 @@ a.length// returns 0
 ### Objects
 
 
-As we know that we can add and remove values in object any time .Here i am going to explain how it works internally
-
 consider a person Object which has a name and sayName function
 
 var person={
@@ -216,6 +214,38 @@ sayNameforPerson1WithArgument()//output Hey my name is ::reddy
 // even if we call sayNameforPerson1WithArgument with argument the out put will not change
 
 once bind is done  this  value wont change
+
+
+#### Objects Deep dive
+
+As we know that we can add and remove values in object any time .Here i am going to explain how it works internally
+
+Internally Object has method which are used to set the value of Object they are
+
+[[Put]],[[Set]],[[Delete]]
+
+when we are setting the value of property to the object for the first time then [[Put]] is called
+
+
+Example
+
+var person={
+    name:"reddy" // here [[Put]] comes to play to set the values
+}
+person.name="other" // here [[Set]] will update the value of person name to other
+
+console.log(person.name)// Output:other
+
+delete person.name
+console.log(person.name)//Output:undefined
+
+
+[[Put]] method will create he spot for  object to store the property ,this will create won property called name in perosn object
+
+[[Set]] Set is called if that propery already exists and it will update the value of name from "reddy" to "other"
+
+[[Delete]]
+
 
 
 There is a difference between the enumerable properties returned in a for-in loop
