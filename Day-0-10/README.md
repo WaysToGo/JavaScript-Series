@@ -272,17 +272,12 @@ var person1 = {
 
 console.log(person1.propertyIsEnumerable("name"));// Output true
 
+There are two different types of properties they are Data properties and Accessor properties
+
+Data properites are the values like name from earlier examples
+
+and Accessor properties are getter and setter methods which are used to access these values
 
 
-
-
-
-
-
-
-
-There is a difference between the enumerable properties returned in a for-in loop
-and the ones returned by Object.keys(). The for-in loop also enumerates prototype
-properties, while Object.keys() returns only own (instance) properties.
 
 
