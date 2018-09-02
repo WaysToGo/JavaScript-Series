@@ -247,7 +247,7 @@ console.log(person.name)//Output:undefined
 [[Delete]] delete will delete property in the object as u can see in the above example after delete the value is undefinded
 
 
-Enurable
+Enumerable
 
 By default all the property in object are enumerable which means [[Enumerable]] value is set to true
 
@@ -280,6 +280,57 @@ There are two different types of properties they are Data properties and Accesso
 Data properites are the values like name from earlier examples
 
 and Accessor properties are getter and setter methods which are used to access these values
+
+```javascript
+example
+var person={
+    _name:"Reddy",//_name is naming convention to tell that it is priveate but in real it is not
+
+
+    get name (){             //get is a special key word
+        return this._name;
+    },
+    set name(val){
+        this._name=val;
+    }
+}
+
+console.log(person.name)// Reddy
+
+
+```
+
+in the above example we can create only getter to get the value and only setter to change the value
+
+as we discussed earlier about enumberable we can set thee value ehile defining property using
+
+Object.defineProperty()
+
+example
+
+```javascript
+
+var person={
+    name:"Reddy"
+    }
+Object.defineProperty(person,"name",{enumerable:false});
+console.log(person.propertyIsEnumerable("name")); //returns false
+
+Object.defineProperty(person, "name", {
+ configurable: false // makes object property nonenumerable and nonconfigurable meaining u cannot delete and change the value
+
+});
+
+
+Object.defineProperty(person1, "name", {
+ configurable: true// once it is set to flase we cannot change it again to true
+});
+
+
+```
+
+
+
 
 
 ## Day 4 of JavaScript
