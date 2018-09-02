@@ -328,8 +328,41 @@ Object.defineProperty(person1, "name", {
 
 
 ```
+Data property
+
+data property will have two additonal attributes [[Value]] and [[Writable]]
+
+[[Value]] holds the value of property and [[Writable]] is by default true and can be chaged using defineProperty
+
+```javascript
+
+var person = {};
+
+Object.defineProperty(person, "name", {
+ value: "Reddy",
+ enumerable: true,
+ configurable: true,
+ writable: true
+});
 
 
+Object.defineProperty(person, "name", {
+ value: "Reddy"
+});// if we define in this way the value of enumerable, configurable,writable becomes false
+
+// so the value cannot be changed
+
+```
+to get the property values
+
+var person = {
+ name: "Reddy"
+};
+var descriptor = Object.getOwnPropertyDescriptor(person, "name");
+console.log(descriptor.enumerable); // true
+console.log(descriptor.configurable); // true
+console.log(descriptor.writable); // true
+console.log(descriptor.value); //"Reddy"
 
 
 
