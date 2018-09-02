@@ -355,6 +355,8 @@ Object.defineProperty(person, "name", {
 ```
 to get the property values
 
+
+```javascript
 var person = {
  name: "Reddy"
 };
@@ -363,10 +365,30 @@ console.log(descriptor.enumerable); // true
 console.log(descriptor.configurable); // true
 console.log(descriptor.writable); // true
 console.log(descriptor.value); //"Reddy"
+```
+
+Preventing Object modification
+
+there are different ways to do this
+
+var person = {
+ name: "Reddy"
+};
+
+
+1) Object.preventExtensions(person)// cannot add any property after this
+
+2) Object.seal(person)// cannot add and remove any property configurable will become false
+3) Object.freeze() // it is sealed and writable also set to false means u cannot even edit the property
+
+
 
 
 
 ## Day 4 of JavaScript
+
+### Prototypes
+
 
 ## Day 5 of JavaScript
 
