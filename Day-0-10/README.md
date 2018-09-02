@@ -272,6 +272,9 @@ var person1 = {
 
 console.log(person1.propertyIsEnumerable("name"));// Output true
 
+## Day 3 of JavaScript
+
+
 There are two different types of properties they are Data properties and Accessor properties
 
 Data properites are the values like name from earlier examples
@@ -279,5 +282,16 @@ Data properites are the values like name from earlier examples
 and Accessor properties are getter and setter methods which are used to access these values
 
 
+## Day 4 of JavaScript
 
+## Day 5 of JavaScript
 
+## Day 6 of JavaScript
+
+## Day 7 of JavaScript
+
+## Day 8 of JavaScript
+
+## Day 9 of JavaScript
+
+## Day 10 of JavaScript
