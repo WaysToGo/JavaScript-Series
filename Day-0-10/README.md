@@ -390,6 +390,47 @@ var person = {
 ### Prototypes
 
 
+To appriciate the usage of prototype we need to know about the constructors
+
+Constructor is simply a function which is used with new to create a Object
+
+The only difference is that name should start with capital letter
+
+example
+function Person(){
+
+}
+
+var Person1=new Person()//
+or
+var Person1=new Person//can be written in this way if we are not passing any arguments
+
+Person1 instanceOf Person //returns true
+
+```javascript
+function Person(name) {
+ this.name = name;
+ this.sayName = function() {
+ console.log(this.name);
+ };
+}
+
+var Person1 = new Person;//person1 also has the sayName consider if we have 100 insances we have 100 sayName functions copied to each instance
+
+var Person2 = new Person;//same sayName is copied here also
+
+
+
+
+
+```
+
+so how to solve this?
+
+here comes our savior prototype
+
+
+
 ## Day 5 of JavaScript
 
 ## Day 6 of JavaScript
