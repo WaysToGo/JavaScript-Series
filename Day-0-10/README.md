@@ -429,8 +429,40 @@ so how to solve this?
 
 here comes our savior prototype
 
+```javascript
+
+function Person(name) {
+ this.name = name;
+}
+ Person.prototype.sayName = function() {
+ console.log(this.name);
+};
+var person1 = new Person("Reddy");
+var person2 = new Person("Shiva");
+console.log(person1.name); // "Reddy"
+console.log(person2.name); // "Shiva"
+person1.sayName(); // outputs "Reddy"
+person2.sayName(); //outputs "Shiva"
+
+```
+
+here the sayName function is added to  Person prototype and when a new instance is created that will be refered
+
+Prototype is the shared memory between instances,like a static method in programming languages like Java
 
 
+even if we freeze the the Object we can still add the properties to prototype from which the instance is created
+
+```
+var person1 = new Person("Reddy");
+
+Object.freeze(person1);
+Person.prototype.sayHi = function() {
+ console.log("Hi");
+};
+person1.sayHi(); // outputs "Hi"
+
+```
 ## Day 5 of JavaScript
 
 ## Day 6 of JavaScript
