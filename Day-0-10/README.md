@@ -484,6 +484,12 @@ valueOf() //Returns the value representation of the object
 toString() //Returns a string representation of the object
 ```
 
+
+
+
+
+
+
 ## Day 6 of JavaScript
 
 ## Day 7 of JavaScript
