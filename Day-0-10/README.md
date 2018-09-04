@@ -470,6 +470,19 @@ person1.sayHi(); // outputs "Hi"
 
  ###inheritance
 
+ list of methods inherited from object are
+```javascript
+
+hasOwnProperty()// Determines whether an own property with the given name exists
+
+propertyIsEnumerable()// Determines whether an own property is enumerable
+
+isPrototypeOf() //Determines whether the object is the prototype of another
+
+valueOf() //Returns the value representation of the object
+
+toString() //Returns a string representation of the object
+```
 
 ## Day 6 of JavaScript
 
