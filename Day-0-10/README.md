@@ -453,7 +453,7 @@ Prototype is the shared memory between instances,like a static method in program
 
 even if we freeze the the Object we can still add the properties to prototype from which the instance is created
 
-```
+```javascript
 var person1 = new Person("Reddy");
 
 Object.freeze(person1);
@@ -463,7 +463,13 @@ Person.prototype.sayHi = function() {
 person1.sayHi(); // outputs "Hi"
 
 ```
+
+
+
 ## Day 5 of JavaScript
+
+ ###inheritance
+
 
 ## Day 6 of JavaScript
 
