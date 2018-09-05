@@ -485,12 +485,11 @@ toString() //Returns a string representation of the object
 ```
 
 
-
-
-
-
-
 ## Day 6 of JavaScript
+Effective JavaScript 68 Specific Ways to Harness the Power of JavaScript (Effective Software Development Series)
+
+daily goal- cover daily 10 ways
+
 
 ## Day 7 of JavaScript
 
