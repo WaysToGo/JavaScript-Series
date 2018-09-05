@@ -486,6 +486,28 @@ toString() //Returns a string representation of the object
 
 
 ## Day 6 of JavaScript
+
+
+valueOf()
+
+The valueOf() method gets called whenever an operator is used on an
+object. By default, valueOf() simply returns the object instance. The
+primitive wrapper types override valueOf() so that it returns a string for
+String, a Boolean for Boolean, and a number for Number
+
+
+toString()
+
+The toString() method is called as a fallback whenever valueOf() returns a
+reference value instead of a primitive value. It is also implicitly called on
+primitive values whenever JavaScript is expecting a string. For example,
+when a string is used as one operand for the plus operator, the other
+operand is automatically converted to a string. If the other operand is a
+primitive value, it is converted into a string representation (for example,
+true becomes "true"), but if it is a reference value, then valueOf() is called.
+If valueOf() returns a reference value, toString() is called and the returned
+value is used
+
 Effective JavaScript 68 Specific Ways to Harness the Power of JavaScript (Effective Software Development Series)
 
 daily goal- cover daily 10 ways
