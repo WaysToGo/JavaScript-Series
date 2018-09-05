@@ -512,6 +512,11 @@ Effective JavaScript 68 Specific Ways to Harness the Power of JavaScript (Effect
 
 daily goal- cover daily 10 ways
 
+rules of using semicolon
+
+- if it  statment start with (, [, +, -, or /  javascript wont add semicolon by default
+- after return ,break,postfix,prefix ,throw  javascript will add semicolon by default
+- for for loop head also it wont add semicolons
 
 ## Day 7 of JavaScript
 
