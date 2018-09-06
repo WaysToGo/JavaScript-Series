@@ -520,6 +520,13 @@ rules of using semicolon
 
 ## Day 7 of JavaScript
 
+day-7
+closure
+variable hoisting
+variable scope
+iffy
+
+
 ## Day 8 of JavaScript
 
 ## Day 9 of JavaScript
