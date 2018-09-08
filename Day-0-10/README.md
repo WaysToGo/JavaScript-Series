@@ -540,7 +540,27 @@ Angular
  if that class needs http or some other things the generated javascript code wont have enough information
  if we add injectable to then compiled javascript code has enough information of what to import to make it work
 
+Routes
+    export const appRoutes:Routes // this will give intellisence for router
+    canActive -> is used if page is not available and to redirect user to 404 or some page then it can be used
+    canDeactive -> is used Deactive all routes (can be used when user enters data and dont save the data and try to move to another page )
+    some times page loads partially loads and when the data comes the rest of the page is loaded this can be annoying ,can be solved by using preloading (setting the data to the route as parameter and once data comes the page loads automatically ) at once
 
+Active route
+some times when we want to show the user on which page he is in so we add routerLinkActive=active
+after adding this also the other router are also active the starting of page is same example
+/foo/ ->this is as active when foo route is taken
+/foo/bar  ->this and /foo also actived since both starts with foo to solve this use  routerLinkActiveOptons="{exact:true}"
+
+lazy Loading
+Having a different module files can be helpful to lazy load pages when  required
+
+Things to be noted while creating the modules
+it uses the CommonModule  instad of BrowserModule
+for RouterModule we use forChild() instad of forRoot()
+and in main route file add loadChildren to lazy load children when required
+
+for better viewing use barrels (import and export all files from one file and use that file to import which will make it look proper)
 
 ## Day 9 of JavaScript
 
