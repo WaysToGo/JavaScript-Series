@@ -529,6 +529,19 @@ iffy
 
 ## Day 8 of JavaScript
 
+Change of track for few days
+
+Angular
+ @injectable
+ what happens if we give injectable
+ even if we dont add also it will works if no dependencys are available
+
+ if it is a simple class then no Problem
+ if that class needs http or some other things the generated javascript code wont have enough information
+ if we add injectable to then compiled javascript code has enough information of what to import to make it work
+
+
+
 ## Day 9 of JavaScript
 
 ## Day 10 of JavaScript
