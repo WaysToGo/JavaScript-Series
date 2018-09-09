@@ -562,6 +562,21 @@ and in main route file add loadChildren to lazy load children when required
 
 for better viewing use barrels (import and export all files from one file and use that file to import which will make it look proper)
 
+Forms
+
+we can create forms in tow ways hey are template based and model based(also known  as reactive forms)
+
+input can be taken as $event.target.value or ngModel
+
 ## Day 9 of JavaScript
+
+Angular
+
+inside the selector if we write any content like
+
+<app-component>
+<h1> sample text </h1> //this can be accessed by using <ng-content></ng-content>
+</app-component>
+
 
 ## Day 10 of JavaScript
