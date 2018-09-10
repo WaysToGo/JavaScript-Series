@@ -580,3 +580,25 @@ inside the selector if we write any content like
 
 
 ## Day 10 of JavaScript
+
+Hoisting
+ JavaScript implicitly “hoists” the declaration
+part to the top of the enclosing function and leaves the assignment in
+place.
+
+example
+function a(){
+console.log(a);
+    var a=10;
+    var b=20;
+}
+converted code
+function a(){
+    var a;
+    var b;
+console.log(a); //undefined
+    var a=10;
+    var b=20;
+}
+
+Redeclarations of a variable are treated as a single variable.
